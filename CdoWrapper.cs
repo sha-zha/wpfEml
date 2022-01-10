@@ -34,7 +34,6 @@ namespace wpfEmail
                 msg.DataSource.OpenObject(stream, "_Stream");
                 msg.DataSource.Save();
                 return msg;
-            
             }
             catch (Exception ex)
             {

@@ -50,14 +50,41 @@ namespace wpfEmail
         private void Source_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // récuperation du fichier a analyser
-            var nameEml = source.SelectedItem.ToString();
-           
-            // afficher le corps
+            var nameEml = source.SelectedItem.ToString(); 
             var message = CdoWrapper.LoadMessage(nameEml);
-            subject.Text = message.Subject;
-            textBody.Text = message.TextBodyPart.GetString();
 
+            // afficher le corps
+            to.Text = "De :" + message.To;
+            from.Text = "A :" + message.From;
+            subject.Text = "Sujet :" + message.Subject;
+            textBody.Text = "Message : \n"+message.TextBodyPart.GetString();
+          
 
+            if (message.ReceivedTime.ToString() != "30/12/1899 00:00:00")
+            {
+                date.Text = "Envoyé le "+message.ReceivedTime.ToString();
+            }
+            else
+            {
+                date.Text = "Date d'envoi inconnue";
+            }
+
+            //pièce jointe
+
+           if (message.Attachments.Count > 0)
+            {
+                for (int i = 1; i < message.Attachments.Count + 1; i++)
+                {
+                    files.Text += "Pièce(s) jointe(s)"+i+" \n nom :"+
+                        message.Attachments[i].FileName +" "+ 
+                        message.Attachments[i].ContentMediaType+ ", poids:" + 
+                       (message.Attachments[i].GetDecodedContentStream().Size /1000)+" Ko \n";
+                }
+            }
+            else
+            {
+                files.Text = "Pièce(s) jointe(s): 0";
+            }
         }
     }    
 }

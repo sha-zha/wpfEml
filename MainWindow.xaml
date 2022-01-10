@@ -5,18 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpfEmail"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="700" Width="800">
+    <Grid Margin="20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="97*"/>
-            <RowDefinition Height="120*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ComboBox x:Name="source" Margin="10,32,10,0" VerticalAlignment="Top" Loaded="Source_Loaded" SelectionChanged="Source_SelectionChanged"/>
-        <Label Content="Sujet :" Margin="0,87,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="0,5,5,5" Grid.Column="1"/>
-        <TextBox x:Name="subject" TextWrapping="Wrap" Margin="0,111,0,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" IsReadOnly="True" Grid.Column="1"/>
-        <Label Content="Message :" Margin="13,133,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="0,5,5,5"/>
-        <TextBox x:Name="textBody" TextWrapping="Wrap" Margin="1,164,-1,0" VerticalAlignment="Top" IsReadOnly="True" Height="auto"/>
+        <ComboBox x:Name="source" Margin="1,32,10,0" VerticalAlignment="Top" Loaded="Source_Loaded" SelectionChanged="Source_SelectionChanged" FontFamily="Nirmala UI" FontSize="18" FontStyle="Normal" BorderBrush="#FFF7F7F7" Foreground="#FF424242">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <TextBox x:Name="from" TextWrapping="Wrap" Margin="-5,189,5,0" VerticalAlignment="Top" IsReadOnly="True" Height="30" Background="#FFF7F7F7" BorderBrush="#FFF7F7F7" Text="A :" Foreground="#FFC8C8C8" FontFamily="Nirmala UI" FontSize="18"/>
+        <TextBox x:Name="to" TextWrapping="Wrap" Margin="-5,129,5,0" VerticalAlignment="Top" IsReadOnly="True" Height="30" Background="#FFF7F7F7" BorderBrush="#FFF7F7F7" Text="De :" Foreground="#FFC8C8C8" FontFamily="Nirmala UI" FontSize="18"/>
+        <TextBox x:Name="subject" TextWrapping="Wrap" Margin="0,244,0,0" VerticalAlignment="Top" IsReadOnly="True" Height="30" Background="#FFF7F7F7" BorderBrush="#FFF7F7F7" Text="Sujet :" Foreground="#FFC8C8C8" FontFamily="Nirmala UI" FontSize="18"/>
+        <TextBox x:Name="date" HorizontalAlignment="Center" Margin="0,89,0,0" Text="Envoie inconnue" TextWrapping="Wrap" VerticalAlignment="Top" Width="750" Height="25"/>
+        <TextBox x:Name="textBody" TextWrapping="Wrap" Margin="0,334,0,0" VerticalAlignment="Top" IsReadOnly="True" MinHeight="200" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+         ScrollViewer.VerticalScrollBarVisibility="Auto" Height="auto" BorderBrush="#FFF7F7F7" Foreground="#FFC8C8C8" Background="#FFF7F7F7" Text="Message :" FontFamily="Nirmala UI" FontSize="18"/>
+        <TextBox x:Name="files" TextWrapping="Wrap" Margin="0,554,0,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+         ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" IsReadOnly="True"    MinHeight="100" Height="auto" Background="#FFF7F7F7" BorderBrush="#FFF7F7F7"  Foreground="#FFC8C8C8" Text="Pièce(s) jointe(s) :" FontFamily="Nirmala UI" FontSize="18"/>
 
     </Grid>
-
 </Window>

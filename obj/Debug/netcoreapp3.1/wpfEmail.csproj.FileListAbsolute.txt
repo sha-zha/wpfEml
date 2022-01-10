@@ -31,7 +31,6 @@ C:\Users\Dell\Desktop\.NET\wpfEml\bin\Debug\netcoreapp3.1\wpfEmail.dll
 C:\Users\Dell\Desktop\.NET\wpfEml\bin\Debug\netcoreapp3.1\wpfEmail.pdb
 C:\Users\Dell\Desktop\.NET\wpfEml\bin\Debug\netcoreapp3.1\Interop.CDO.dll
 C:\Users\Dell\Desktop\.NET\wpfEml\bin\Debug\netcoreapp3.1\Interop.ADODB.dll
-C:\Users\Dell\Desktop\.NET\wpfEml\obj\Debug\netcoreapp3.1\wpfEmail.csproj.AssemblyReference.cache
 C:\Users\Dell\Desktop\.NET\wpfEml\obj\Debug\netcoreapp3.1\Interop.CDO.dll
 C:\Users\Dell\Desktop\.NET\wpfEml\obj\Debug\netcoreapp3.1\Interop.ADODB.dll
 C:\Users\Dell\Desktop\.NET\wpfEml\obj\Debug\netcoreapp3.1\wpfEmail.csproj.ResolveComReference.cache
@@ -48,3 +47,4 @@ C:\Users\Dell\Desktop\.NET\wpfEml\obj\Debug\netcoreapp3.1\wpfEmail.csproj.CoreCo
 C:\Users\Dell\Desktop\.NET\wpfEml\obj\Debug\netcoreapp3.1\wpfEmail.dll
 C:\Users\Dell\Desktop\.NET\wpfEml\obj\Debug\netcoreapp3.1\wpfEmail.pdb
 C:\Users\Dell\Desktop\.NET\wpfEml\obj\Debug\netcoreapp3.1\wpfEmail.genruntimeconfig.cache
+C:\Users\Dell\Desktop\.NET\wpfEml\obj\Debug\netcoreapp3.1\wpfEmail.csproj.AssemblyReference.cache
